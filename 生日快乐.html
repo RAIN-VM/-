@@ -19,8 +19,11 @@
 <audio style="display: none;" preload="auto" loop="loop" id="audios" src="生日快乐.mp3">
 </audio>
 <script>
-    var music = document. getElementById("audios");
+    var audios = document. getElementById("audios");
     window.addEventListener("click", function () {
+        audios.play();
+    });
+    document.addEventListener("touchstart",function () {
         audios.play();
     });
 </script>
