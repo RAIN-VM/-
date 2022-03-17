@@ -16,9 +16,15 @@
 
 </head>
 <body>
-<audio style="display: none;" autoplay="autoplay" preload="auto" loop="loop" src="生日快乐.mp3">
-</audio>​
-
+<audio style="display: none;" autoplay="autoplay" preload="auto" loop="loop" id="audios" src="生日快乐.mp3">
+</audio>
+<script>
+    var music = document. getElementById("audios");
+    window.addEventListener("click", function () {
+        audios.play();
+    });
+</script>
+    
 <canvas id="canvas" style="position:absolute;width:100%;height:100%;z-index:8888"></canvas>
 <canvas style="position:absolute;width:100%;height:100%;z-index:9999" class="canvas" ></canvas>
 <div class="overlay">
