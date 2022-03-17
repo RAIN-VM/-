@@ -23,8 +23,18 @@
     window.addEventListener("click", function () {
         audios.play();
     });
-    document.addEventListener("touchstart",function () {
-        audios.play();
+    //document.addEventListener("touchstart",function () {
+      //  audios.play();
+    //});
+    document.addEventListener('DOMContentLoaded', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('audios');
+            audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay();
     });
 </script>
     
